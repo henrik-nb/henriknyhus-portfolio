@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, MapPin, Sparkles } from "lucide-react";
 import { HERO_DATA, CLIENT_LOGOS } from "@/data/portfolio";
 
 export function Hero() {
@@ -41,24 +40,6 @@ export function Hero() {
                   />
                 </div>
               </div>
-            </div>
-
-            {/* Action buttons on single horizontal row */}
-            <div className="pt-1 sm:pt-2 flex items-center gap-3 text-xs sm:text-sm">
-              <a
-                href="#work"
-                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-full font-medium hover:bg-black/85 transition-all shadow-xs shrink-0"
-              >
-                Explore work
-                <ArrowDown className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 border border-black/15 bg-transparent rounded-full font-medium text-black hover:bg-black/[0.04] transition-all shrink-0"
-              >
-                Let&apos;s talk
-                <ArrowUpRight className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-              </a>
             </div>
           </div>
 

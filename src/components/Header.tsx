@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import Image from "next/image";
 
@@ -69,13 +69,6 @@ export function Header() {
               <span>{item.label}</span>
             </a>
           ))}
-          <a
-            href="mailto:henrik.b.nyhus@gmail.com"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider bg-black text-white rounded-full hover:bg-black/85 transition-colors shrink-0"
-          >
-            Get in touch
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -104,16 +97,6 @@ export function Header() {
               <span>{item.label}</span>
             </a>
           ))}
-          <div className="pt-2">
-            <a
-              href="mailto:henrik.b.nyhus@gmail.com"
-              onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 text-sm font-semibold bg-black text-white rounded-full"
-            >
-              Get in touch
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-          </div>
         </div>
       )}
     </header>
