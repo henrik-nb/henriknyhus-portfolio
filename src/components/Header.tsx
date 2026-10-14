@@ -22,8 +22,22 @@ export function Header() {
     { numeral: "I.", label: "Services", href: "#services" },
     { numeral: "II.", label: "Selected Work", href: "#work" },
     { numeral: "III.", label: "Experience", href: "#experience" },
-    { numeral: "IV.", label: "Contact", href: "#contact" },
   ];
+
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    if (window.location.pathname === "/") {
+      const contactEl = document.getElementById("contact");
+      if (contactEl) {
+        contactEl.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "/#contact";
+    }
+  };
 
   return (
     <header
@@ -69,6 +83,15 @@ export function Header() {
               <span>{item.label}</span>
             </a>
           ))}
+
+          {/* IV. Contact me Button */}
+          <button
+            onClick={scrollToContact}
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-black text-white rounded-full hover:bg-black/85 transition-all shadow-xs cursor-pointer shrink-0"
+          >
+            <span className="text-white/60 font-serif font-bold normal-case">IV.</span>
+            <span>Contact me</span>
+          </button>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -97,6 +120,15 @@ export function Header() {
               <span>{item.label}</span>
             </a>
           ))}
+          <div className="pt-2">
+            <button
+              onClick={scrollToContact}
+              className="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 text-sm font-semibold uppercase tracking-wider bg-black text-white rounded-full cursor-pointer"
+            >
+              <span className="text-white/60 font-serif font-bold normal-case">IV.</span>
+              <span>Contact me</span>
+            </button>
+          </div>
         </div>
       )}
     </header>
