@@ -6,7 +6,7 @@ import { HERO_DATA, CLIENT_LOGOS } from "@/data/portfolio";
 
 export function Hero() {
   return (
-    <section className="pt-24 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 border-b border-black/[0.06]">
+    <section className="pt-24 sm:pt-36 lg:pt-40 border-b border-black/[0.06]">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start lg:items-center">
           {/* Main Statement */}
@@ -93,21 +93,21 @@ export function Hero() {
         </div>
 
         {/* Client Logos Sliding Carousel */}
-        <div className="mt-16 sm:mt-24 pt-10 border-t border-black/[0.06] overflow-hidden">
+        <div className="mt-16 sm:mt-24 py-10 sm:py-12 border-t border-black/[0.06] overflow-hidden">
           <div className="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
-            <div className="animate-marquee flex items-center gap-12 sm:gap-16 py-2">
-              {/* Duplicate the array twice for seamless continuous infinite looping */}
-              {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, index) => (
+            <div className="animate-marquee flex items-center gap-10 sm:gap-14">
+              {/* Duplicate the array 4x so there are never any large gaps or empty breaks on any screen width */}
+              {[...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, index) => (
                 <div
                   key={`${logo.name}-${index}`}
-                  className="shrink-0 flex items-center justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 px-2"
+                  className="shrink-0 flex items-center justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 px-1"
                 >
-                  <div className="relative block shrink-0 w-28 sm:w-36 h-8 sm:h-9">
+                  <div className="relative block shrink-0 w-24 sm:w-32 h-7 sm:h-8">
                     <Image
                       src={logo.src}
                       alt={logo.name}
                       fill
-                      sizes="(max-width: 640px) 112px, 144px"
+                      sizes="(max-width: 640px) 96px, 128px"
                       className="object-contain object-center"
                     />
                   </div>
