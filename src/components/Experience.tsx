@@ -35,22 +35,22 @@ export function Experience() {
                   key={i}
                   className="p-6 rounded-2xl bg-white border border-black/[0.06] hover:border-black/15 transition-all"
                 >
-                  <div className="flex items-start justify-between gap-4 mb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4 mb-2">
                     <div>
-                      <h4 className="font-serif text-xl font-bold text-black">
+                      <h4 className="font-serif text-lg sm:text-xl font-bold text-black leading-snug">
                         {exp.role}
                       </h4>
-                      <p className="text-sm font-medium text-black/60">
+                      <p className="text-xs sm:text-sm font-medium text-black/60 mt-0.5">
                         {exp.company}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 self-start shrink-0">
                       {exp.badge && (
                         <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
                           {exp.badge}
                         </span>
                       )}
-                      <span className="font-mono text-xs text-black/40 shrink-0">
+                      <span className="font-mono text-xs text-black/40">
                         {exp.period}
                       </span>
                     </div>
@@ -79,8 +79,8 @@ export function Experience() {
                   key={idx}
                   className="p-6 rounded-2xl bg-white border border-black/[0.06]"
                 >
-                  <div className="flex items-baseline justify-between gap-2 mb-2">
-                    <h4 className="font-serif text-lg font-bold text-black">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2 mb-2">
+                    <h4 className="font-serif text-base sm:text-lg font-bold text-black leading-snug">
                       {edu.degree}
                     </h4>
                     <span className="font-mono text-xs text-black/40 shrink-0">
