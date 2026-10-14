@@ -36,7 +36,13 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between">
         <Link
           href="/"
-          className="group flex items-center no-underline transition-opacity hover:opacity-80"
+          onClick={(e) => {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="group flex items-center no-underline transition-opacity hover:opacity-80 cursor-pointer"
           aria-label="Henrik Nyhus Home"
         >
           <Image
