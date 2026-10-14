@@ -58,7 +58,7 @@ export const HERO_DATA = {
   statement: "I design, write, prototype, test and create solutions for people and businesses.",
   location: "Oslo, Norway",
   currentRole: "Senior Product Designer at VG / Schibsted Media",
-  bio: "With extensive experience as a designer I've tackled complex challenges for leading brands and fast-growing businesses. I gather insights, facilitate workshops, user test, prototype solutions, and develop. Every project is unique—I tailor every phase to the problem's complexity and your strategic goals.",
+  bio: "Digital Designer based in Oslo. With extensive experience across leading brands, I gather insights, facilitate workshops, prototype solutions, and engineer production-ready websites.",
   avatar: "/images/avatar/henrik.png",
   status: "Available for selected advisory, workshops & design projects",
 };

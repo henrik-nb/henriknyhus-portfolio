@@ -17,20 +17,20 @@ export function Hero() {
               <span>{HERO_DATA.location}</span>
             </div>
 
-            {/* Mobile Side-by-Side: Statement + Compact Portrait */}
-            <div className="flex items-start gap-4 lg:block">
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[4.25rem] leading-[1.12] sm:leading-[1.08] tracking-tight font-medium text-black flex-1">
+            {/* Mobile Side-by-Side: Statement + Enlarged Portrait */}
+            <div className="flex items-start gap-4 sm:gap-6 lg:block">
+              <h1 className="font-serif text-2xl sm:text-5xl lg:text-[4.25rem] leading-[1.15] sm:leading-[1.08] tracking-tight font-medium text-black flex-1">
                 {HERO_DATA.statement}
               </h1>
 
-              {/* Mobile-only compact portrait */}
-              <div className="lg:hidden shrink-0 pt-1">
-                <div className="relative w-20 h-24 sm:w-28 sm:h-36 rounded-xl overflow-hidden bg-neutral-200/60 shadow-xs border border-black/[0.06]">
+              {/* Mobile-only enlarged portrait */}
+              <div className="lg:hidden shrink-0">
+                <div className="relative w-28 h-36 sm:w-36 sm:h-44 rounded-2xl overflow-hidden bg-neutral-200/60 shadow-xs border border-black/[0.06]">
                   <Image
                     src={HERO_DATA.avatar}
                     alt={HERO_DATA.name}
                     fill
-                    sizes="112px"
+                    sizes="144px"
                     priority
                     className="object-cover grayscale contrast-[1.05]"
                   />
@@ -38,21 +38,22 @@ export function Hero() {
               </div>
             </div>
             
-            <p className="text-base sm:text-lg text-black/70 leading-relaxed max-w-2xl font-light">
+            <p className="text-sm sm:text-lg text-black/70 leading-relaxed max-w-2xl font-light">
               {HERO_DATA.bio}
             </p>
 
-            <div className="pt-1 sm:pt-2 flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm">
+            {/* Action buttons on single horizontal row */}
+            <div className="pt-1 sm:pt-2 flex items-center gap-3 text-xs sm:text-sm">
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-full font-medium hover:bg-black/85 transition-all shadow-xs"
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-full font-medium hover:bg-black/85 transition-all shadow-xs shrink-0"
               >
-                Explore selected work
+                Explore work
                 <ArrowDown className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 border border-black/15 bg-transparent rounded-full font-medium text-black hover:bg-black/[0.04] transition-all"
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 border border-black/15 bg-transparent rounded-full font-medium text-black hover:bg-black/[0.04] transition-all shrink-0"
               >
                 Let&apos;s talk
                 <ArrowUpRight className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
