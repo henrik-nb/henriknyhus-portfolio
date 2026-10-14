@@ -42,7 +42,7 @@ export function Header() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
-          className="group flex items-center no-underline transition-opacity hover:opacity-80 cursor-pointer"
+          className="group -ml-2 flex items-center no-underline transition-opacity hover:opacity-80 cursor-pointer"
           aria-label="Henrik Nyhus Home"
         >
           <Image
