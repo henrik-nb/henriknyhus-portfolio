@@ -17,13 +17,18 @@ export function Hero() {
               <span>{HERO_DATA.location}</span>
             </div>
 
-            {/* Mobile Side-by-Side: Statement + Enlarged Portrait */}
-            <div className="flex items-start gap-4 sm:gap-6 lg:block">
-              <h1 className="font-serif text-2xl sm:text-5xl lg:text-[4.25rem] leading-[1.15] sm:leading-[1.08] tracking-tight font-medium text-black flex-1">
-                {HERO_DATA.statement}
-              </h1>
+            {/* Full-width confident H1 spanning edge to edge */}
+            <h1 className="font-serif text-[2rem] sm:text-5xl lg:text-[4.25rem] leading-[1.12] sm:leading-[1.08] tracking-tight font-medium text-black w-full">
+              {HERO_DATA.statement}
+            </h1>
 
-              {/* Mobile-only enlarged portrait */}
+            {/* Mobile Layout: Ingress Bio + Enlarged Portrait side by side */}
+            <div className="flex items-center gap-4 sm:gap-6 lg:block">
+              <p className="text-sm sm:text-lg text-black/70 leading-relaxed font-light flex-1">
+                {HERO_DATA.bio}
+              </p>
+
+              {/* Mobile-only prominent portrait alongside the ingress */}
               <div className="lg:hidden shrink-0">
                 <div className="relative w-28 h-36 sm:w-36 sm:h-44 rounded-2xl overflow-hidden bg-neutral-200/60 shadow-xs border border-black/[0.06]">
                   <Image
@@ -37,10 +42,6 @@ export function Hero() {
                 </div>
               </div>
             </div>
-            
-            <p className="text-sm sm:text-lg text-black/70 leading-relaxed max-w-2xl font-light">
-              {HERO_DATA.bio}
-            </p>
 
             {/* Action buttons on single horizontal row */}
             <div className="pt-1 sm:pt-2 flex items-center gap-3 text-xs sm:text-sm">
