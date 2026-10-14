@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAFAF8;
+  --background: #FAF9F9;
   --foreground: #141413;
 }
 
@@ -16,6 +16,11 @@ body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(ellipse 90% 65% at 78% 22%, rgba(255, 232, 221, 0.75) 0%, rgba(255, 232, 221, 0.35) 45%, rgba(250, 249, 249, 0) 80%),
+    radial-gradient(ellipse 60% 40% at 20% 75%, rgba(255, 232, 221, 0.25) 0%, rgba(250, 249, 249, 0) 70%);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 h1, h2, h3, .font-serif {
