@@ -77,14 +77,15 @@ export function Hero() {
             {CLIENT_LOGOS.map((logo) => (
               <div
                 key={logo.name}
-                className="h-10 flex items-center justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                className="h-10 flex items-center justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 px-2"
               >
-                <div className="relative w-full h-8">
+                <div className="relative w-full max-w-[140px] h-7">
                   <Image
                     src={logo.src}
                     alt={logo.name}
                     fill
-                    className="object-contain"
+                    sizes="140px"
+                    className="object-contain object-center"
                   />
                 </div>
               </div>
