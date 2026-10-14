@@ -53,6 +53,9 @@ export function Header() {
           onClick={(e) => {
             if (window.location.pathname === "/") {
               e.preventDefault();
+              if (window.location.hash) {
+                window.history.pushState(null, "", "/");
+              }
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
