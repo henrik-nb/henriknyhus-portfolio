@@ -64,16 +64,22 @@ export const HERO_DATA = {
 };
 
 export const CLIENT_LOGOS = [
-  { name: "Finn.no", src: "/images/logos/finn.svg" },
-  { name: "Equinor", src: "/images/logos/equinor.svg" },
-  { name: "Statens vegvesen", src: "/images/logos/statens-vegvesen.svg" },
-  { name: "Veidekke", src: "/images/logos/veidekke.svg" },
-  { name: "Thales", src: "/images/logos/thales.svg" },
-  { name: "Yara", src: "/images/logos/yara.svg" },
-  { name: "Forbrukerrådet", src: "/images/logos/forbrukerradet.svg" },
-  { name: "If Forsikring", src: "/images/logos/if-forsikring.svg" },
-  { name: "Sentralregisteret", src: "/images/logos/sentralregisteret.svg" },
-  { name: "London Pub", src: "/images/logos/london-pub.svg" },
+  { name: "Equinor", src: "/images/logos/carousel/client-logo-01.svg" },
+  { name: "Client 02", src: "/images/logos/carousel/client-logo-02.svg" },
+  { name: "Finn.no", src: "/images/logos/carousel/client-logo-03.svg" },
+  { name: "If Forsikring", src: "/images/logos/carousel/client-logo-04.svg" },
+  { name: "Yara", src: "/images/logos/carousel/client-logo-05.svg" },
+  { name: "Forbrukerrådet", src: "/images/logos/carousel/client-logo-06.svg" },
+  { name: "London Pub", src: "/images/logos/carousel/client-logo-07.svg" },
+  { name: "Veidekke", src: "/images/logos/carousel/client-logo-08.svg" },
+  { name: "Client 09", src: "/images/logos/carousel/client-logo-09.svg" },
+  { name: "Client 10", src: "/images/logos/carousel/client-logo-10.svg" },
+  { name: "Sentralregisteret", src: "/images/logos/carousel/client-logo-11.svg" },
+  { name: "Client 12", src: "/images/logos/carousel/client-logo-12.svg" },
+  { name: "Statens vegvesen", src: "/images/logos/carousel/client-logo-13.svg" },
+  { name: "Client 14", src: "/images/logos/carousel/client-logo-14.svg" },
+  { name: "Client 15", src: "/images/logos/carousel/client-logo-15.svg" },
+  { name: "Thales", src: "/images/logos/carousel/client-logo-16.svg" },
 ];
 
 export const SERVICES: Service[] = [

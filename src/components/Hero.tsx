@@ -92,25 +92,28 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Client Logos Row */}
-        <div className="mt-16 sm:mt-24 pt-10 border-t border-black/[0.06]">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 sm:gap-10 items-center">
-            {CLIENT_LOGOS.map((logo) => (
-              <div
-                key={logo.name}
-                className="h-10 flex items-center justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 px-2"
-              >
-                <div className="relative w-full max-w-[140px] h-7">
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    fill
-                    sizes="140px"
-                    className="object-contain object-center"
-                  />
+        {/* Client Logos Sliding Carousel */}
+        <div className="mt-16 sm:mt-24 pt-10 border-t border-black/[0.06] overflow-hidden">
+          <div className="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
+            <div className="animate-marquee flex items-center gap-12 sm:gap-16 py-2">
+              {/* Duplicate the array twice for seamless continuous infinite looping */}
+              {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, index) => (
+                <div
+                  key={`${logo.name}-${index}`}
+                  className="shrink-0 flex items-center justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 px-2"
+                >
+                  <div className="relative block shrink-0 w-28 sm:w-36 h-8 sm:h-9">
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      fill
+                      sizes="(max-width: 640px) 112px, 144px"
+                      className="object-contain object-center"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
