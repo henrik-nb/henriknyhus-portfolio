@@ -29,7 +29,7 @@ export function Hero() {
 
               {/* Mobile-only prominent portrait alongside the ingress */}
               <div className="lg:hidden shrink-0">
-                <div className="relative w-28 h-36 sm:w-36 sm:h-44 rounded-2xl overflow-hidden bg-neutral-200/60 shadow-xs border border-black/[0.06]">
+                <div className="relative w-28 h-36 sm:w-36 sm:h-44 overflow-hidden bg-neutral-200/60 shadow-xs border border-black/[0.06]">
                   <Image
                     src={HERO_DATA.avatar}
                     alt={HERO_DATA.name}
@@ -46,7 +46,7 @@ export function Hero() {
           {/* Desktop Studio Portrait (hidden on mobile, visible on lg) */}
           <div className="hidden lg:flex lg:col-span-4 flex-col items-end">
             <div className="w-full max-w-[320px]">
-              <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-neutral-200/60 shadow-xs">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-neutral-200/60 shadow-xs">
                 <Image
                   src={HERO_DATA.avatar}
                   alt={HERO_DATA.name}
@@ -55,19 +55,6 @@ export function Hero() {
                   priority
                   className="object-cover"
                 />
-              </div>
-
-              {/* Minimal caption directly underneath */}
-              <div className="w-full pt-3.5 space-y-1">
-                <div className="flex items-center justify-between text-xs font-serif font-bold text-black">
-                  <span>{HERO_DATA.name}</span>
-                  <span className="font-mono font-normal text-[11px] text-black/40">
-                    Oslo, NO
-                  </span>
-                </div>
-                <p className="text-xs text-black/60 font-light leading-snug">
-                  {HERO_DATA.currentRole}
-                </p>
               </div>
             </div>
           </div>
