@@ -37,7 +37,7 @@ export function Hero() {
                     fill
                     sizes="144px"
                     priority
-                    className="object-cover grayscale contrast-[1.05]"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -72,7 +72,7 @@ export function Hero() {
                   fill
                   sizes="320px"
                   priority
-                  className="object-cover grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-700 ease-out"
+                  className="object-cover"
                 />
               </div>
 
