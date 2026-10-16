@@ -6,6 +6,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy for Sesh App — Henrik Nyhus",
   description: "Privacy policy for Sesh App, developed by Henrik Nyhus.",
+  openGraph: {
+    title: "Privacy Policy for Sesh App — Henrik Nyhus",
+    description: "Privacy policy for Sesh App, developed by Henrik Nyhus.",
+    images: ["/images/sesh/sesh-banner.png"],
+  },
 };
 
 export default function SeshPrivacyPage() {
@@ -16,7 +21,7 @@ export default function SeshPrivacyPage() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           {/* Top Hero Section */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16 sm:mb-20">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-6">
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#141413] leading-[1.1] mb-6">
                 Privacy Policy for Sesh App
               </h1>
@@ -25,16 +30,16 @@ export default function SeshPrivacyPage() {
               </p>
             </div>
 
-            {/* App Mockup */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-[180px] sm:w-[220px] transition-transform duration-300 hover:scale-[1.02]">
+            {/* App Mockup Banner */}
+            <div className="lg:col-span-6 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[480px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10 transition-transform duration-300 hover:scale-[1.01]">
                 <Image
-                  src="/images/sesh/app-mockup.png"
-                  alt="Sesh Workout Timer App"
-                  width={525}
-                  height={1024}
+                  src="/images/sesh/sesh-banner.png"
+                  alt="SESH - Your ultimate Workout timer companion!"
+                  width={1024}
+                  height={576}
                   priority
-                  className="w-full h-auto drop-shadow-2xl"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
