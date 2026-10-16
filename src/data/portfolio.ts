@@ -302,7 +302,6 @@ export const EXPERIENCES: Experience[] = [
     period: "2024 — Present",
     role: "Senior Product Designer",
     description: "Driving product and design initiatives across VG, VGTV, and Schibsted's media brands. Focused on evolving video journalism and modern digital formats into an accessible, high-engagement, and seamlessly integrated component of the modern news experience.",
-    badge: "Current",
   },
   {
     company: "Freelance / Design by Henrik",
